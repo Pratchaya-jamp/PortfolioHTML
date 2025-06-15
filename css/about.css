@@ -1,0 +1,212 @@
+/* css/about.css */
+
+.about-page {
+    padding-bottom: 50px; /* เพิ่มพื้นที่ด้านล่างก่อน Footer */
+}
+
+.about-hero-section {
+    background-color: var(--light-gray);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-hero-section h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.about-hero-section p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-wrap: wrap; /* เพื่อให้ขึ้นบรรทัดใหม่ใน responsive */
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0;
+}
+
+.profile-image {
+    flex: 1; /* กินพื้นที่เท่าๆ กัน */
+    min-width: 250px; /* ขนาดขั้นต่ำเมื่อหน้าจอเล็ก */
+    text-align: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 350px; /* ขนาดสูงสุด */
+    border-radius: 50%; /* รูปภาพวงกลม */
+    border: 8px solid var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.03);
+}
+
+.profile-content {
+    flex: 2; /* กินพื้นที่มากกว่า */
+    min-width: 300px;
+}
+
+.profile-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.profile-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.profile-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-section {
+    /* background-color: var(--light-gray); */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.skill-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.skill-item h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.skill-item p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.quote-section blockquote {
+    font-size: 2rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.5;
+    position: relative;
+}
+
+.quote-section blockquote::before,
+.quote-section blockquote::after {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(255,255,255,0.3);
+    position: absolute;
+    top: -20px;
+}
+
+.quote-section blockquote::before {
+    left: -40px;
+}
+
+.quote-section blockquote::after {
+    right: -40px;
+}
+
+.quote-section cite {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: rgba(255,255,255,0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image {
+        margin-bottom: 30px;
+    }
+    .profile-image img {
+        max-width: 250px;
+    }
+    .quote-section blockquote {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .about-hero-section p {
+        font-size: 1rem;
+    }
+    .profile-content h2 {
+        font-size: 2rem;
+    }
+    .profile-content h3 {
+        font-size: 1.3rem;
+    }
+    .profile-content p {
+        font-size: 1rem;
+    }
+    .skills-section h2 {
+        font-size: 2rem;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .quote-section blockquote {
+        font-size: 1.5rem;
+    }
+    .quote-section blockquote::before,
+    .quote-section blockquote::after {
+        font-size: 3rem;
+        top: -10px;
+    }
+    .quote-section blockquote::before {
+        left: 0;
+    }
+    .quote-section blockquote::after {
+        right: 0;
+    }
+}

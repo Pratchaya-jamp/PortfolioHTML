@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อฉัน - [ชื่อของคุณ]</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">MyPortfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="about.html">เกี่ยวกับฉัน</a></li>
+                <li><a href="portfolio.html">ผลงาน</a></li>
+                <li><a href="blog.html">บทความ</a></li>
+                <li><a href="contact.html" class="active">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="contact-hero-section">
+            <div class="container">
+                <h1>ติดต่อฉัน</h1>
+                <p>หากคุณมีคำถาม โปรเจกต์ที่น่าสนใจ หรือต้องการพูดคุย โปรดอย่าลังเลที่จะติดต่อมา</p>
+            </div>
+        </section>
+
+        <section class="contact-content container">
+            <div class="contact-info">
+                <h2>ข้อมูลการติดต่อ</h2>
+                <p><i class="fas fa-envelope"></i> myemail@example.com</p>
+                <p><i class="fas fa-phone"></i> +66 123 456 789</p>
+                <p><i class="fas fa-map-marker-alt"></i> เลขที่ 123, ถนนสุขุมวิท, กรุงเทพฯ, ประเทศไทย</p>
+
+                <div class="social-media">
+                    <h3>ติดตามฉันได้ที่:</h3>
+                    <a href="#" class="social-icon facebook" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon linkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon github" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <h2>ส่งข้อความถึงฉัน</h2>
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">ชื่อ:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">หัวข้อ:</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">ข้อความ:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                    <p class="form-note">ฉันจะติดต่อกลับโดยเร็วที่สุด!</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 MyName. All rights reserved.</p>
+            <div class="social-links">
+                </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* css/contact.css */
+
+.contact-page {
+    padding-bottom: 50px;
+}
+
+.contact-hero-section {
+    background-color: var(--light-gray);
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-hero-section h1 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.contact-hero-section p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 80px 0;
+    align-items: flex-start; /* จัดให้เริ่มต้นที่ด้านบน */
+}
+
+.contact-info,
+.contact-form-section {
+    flex: 1; /* แบ่งพื้นที่เท่าๆ กัน */
+    min-width: 300px; /* ขนาดขั้นต่ำเมื่อหน้าจอเล็ก */
+}
+
+.contact-info h2,
+.contact-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--dark-gray);
+}
+
+/* **ไม่ต้องใช้ CSS placeholder icon อีกแล้ว เพราะเราใช้ Font Awesome ใน HTML โดยตรง** */
+/* .contact-info .icon-email::before { content: '✉'; margin-right: 10px; font-size: 1.2em; color: var(--primary-color); }
+.contact-info .icon-phone::before { content: '📞'; margin-right: 10px; font-size: 1.2em; color: var(--primary-color); }
+.contact-info .icon-location::before { content: '📍'; margin-right: 10px; font-size: 1.2em; color: var(--primary-color); } */
+
+/* **สไตล์สำหรับ Font Awesome icons ใน contact-info p** */
+.contact-info p .fas { /* เลือกเฉพาะ Font Awesome icons ภายในแท็ก p */
+    margin-right: 10px;
+    font-size: 1.2em; /* ทำให้ไอคอนใหญ่กว่าข้อความเล็กน้อย */
+    color: var(--primary-color);
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 40px;
+}
+
+.social-media h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--secondary-color);
+    color: var(--white); /* ไอคอน Font Awesome จะใช้สีนี้ */
+    border-radius: 50%;
+    font-size: 1.5rem; /* กำหนดขนาดของไอคอน Font Awesome ภายใน */
+    margin-right: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.social-icon:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* คุณสามารถเพิ่มสีเฉพาะสำหรับแต่ละไอคอนเมื่อ hover ได้ ถ้าต้องการ */
+/*
+.social-icon.facebook:hover { background-color: #3b5998; }
+.social-icon.twitter:hover { background-color: #1da1f2; }
+.social-icon.linkedin:hover { background-color: #0077b5; }
+.social-icon.github:hover { background-color: #333; }
+*/
+
+
+/* --- Contact Form --- */
+.contact-form {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit; /* ให้ใช้ฟอนต์เดียวกันกับ body */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; /* อนุญาตให้ปรับขนาดแนวตั้งได้ */
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.form-note {
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 992px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .contact-info,
+    .contact-form-section {
+        min-width: unset; /* ล้างค่า min-width */
+        width: 100%;
+    }
+    .contact-info h2,
+    .contact-form-section h2 {
+        font-size: 2rem;
+    }
+    .contact-info p, .contact-info a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .contact-hero-section p {
+        font-size: 1rem;
+    }
+    .contact-form {
+        padding: 30px;
+    }
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+    }
+}
